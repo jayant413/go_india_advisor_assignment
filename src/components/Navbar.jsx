@@ -1,26 +1,29 @@
 import Image from "next/image";
 import { logo, profile } from "../../public/assets";
-import { stockInfo, clients } from "../../public/constants/info";
+import { stockInfo, clients } from "../constants/info";
+import { HiOutlineSearch } from "react-icons/hi";
 
-const Navbar = ({}) => {
+const Navbar = ({ selectedPage, setSelectedPage, setLeftBar }) => {
   return (
-    <>
+    <div className="">
       {/* Header */}
-      <div className="bg-white h-[4rem] justify-between sm:justify-around pt-5 flex ">
-        <div className="nav-img mt-[-4px]">
+      <div className="bg-white h-[4rem] justify-between sm:justify-around pt-5 flex">
+        <div className="nav-img mt-[-5px]">
           <Image
             src={logo}
             alt="go india logo"
-            className="w-20 md:w-28 h-9 md:h-12 md:translate-y-[-10px]"
+            className="w-20 ml-3 md:w-28 h-12 md:h-14 md:translate-y-[-10px]"
           />
         </div>
-        <div className="nav-search">
+        <div className="nav-search flex border-gray-600 outline-none bg-slate-200 border-solid border-[0px] rounded-md md:w-96 lg:w-[28rem] sm:w-[15rem] w-[13rem] p-[1px] text-black justify-center items-center h-8">
           <input
             type="text"
-            className="border-gray-600 bg-slate-200 border-solid border-[2px] rounded-md md:w-96 lg:w-[28rem] sm:w-[15rem] w-[13rem] p-[2px] text-black "
+            className="bg-slate-200 w-[80%] outline-none md:w-[90%]"
+            placeholder="Search here"
           />
+          <HiOutlineSearch className="cursor-pointer" />
         </div>
-        <div className="nav-menu mr-4 md:mr-0">
+        <div className="nav-menu mr-10 md:mr-0">
           <ul className=" justify-between text-black font-semibold mr-8  md:flex hidden">
             <li className="ml-6 mt-1">
               <a href="">Contact Us</a>
@@ -32,14 +35,18 @@ const Navbar = ({}) => {
               <button>SIGN IN</button>
             </li>
           </ul>
-          <Image
-            src={profile}
-            alt="user profile"
-            className="text-black bg-red-500 rounded-2xl  md:hidden w-7 sm:w-8 translate-x-2 "
-          />
+          <a
+            href="https://github.com/jayant413/go_india_advisor_assignment"
+            target="_blank"
+          >
+            <Image
+              src={profile}
+              alt="user profile"
+              className="text-black bg-red-500 rounded-2xl  md:hidden w-9 sm:w-8 translate-x-2 "
+            />
+          </a>
         </div>
       </div>
-
       {/* Info  */}
       <div className="flex bg-black h-15 cursor-default items-center overflow-scroll p-1 text-white  ">
         {stockInfo.map((i, inx) => {
@@ -61,7 +68,6 @@ const Navbar = ({}) => {
           );
         })}
       </div>
-
       {/* Clients  */}
       <h6 className="pl-4 font-semibold text-red-500">FEATURED COMPANIES</h6>
       <div className="bg-blue-300 items-center h-12 flex pl-2  overflow-auto">
@@ -90,7 +96,36 @@ const Navbar = ({}) => {
           })}
         </div>
       </div>
-    </>
+      {/* Mobile Switch option */}
+      <div className="flex md:hidden text-white">
+        <button
+          className={`w-[50%] p-1 flex  justify-center ${
+            selectedPage == "DF"
+              ? "bg-blue-900 border-b-red-500 border-solid border-b-2"
+              : "bg-blue-600"
+          }`}
+          onClick={() => {
+            setSelectedPage("DF");
+            setLeftBar(false);
+          }}
+        >
+          Discussion Fourm
+        </button>
+        <button
+          className={`w-[50%] p-1 flex  justify-center ${
+            selectedPage == "MS"
+              ? "bg-blue-900 border-b-red-500 border-solid border-b-2"
+              : "bg-blue-600"
+          }`}
+          onClick={() => {
+            setSelectedPage("MS");
+            setLeftBar(false);
+          }}
+        >
+          Market Stories
+        </button>
+      </div>
+    </div>
   );
 };
 

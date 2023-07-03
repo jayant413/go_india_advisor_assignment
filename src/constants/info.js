@@ -12,7 +12,7 @@ import {
     , c_logo_11
     , c_logo_12
     , c_logo_13
-} from "../assets/index"
+} from "../../public/assets/index"
 
 const stockInfo = [
     { name: "Nifty", change: "+", percentageChange: 1.14, price: 19189.05 },

@@ -13,22 +13,14 @@ import c_logo_10 from "./clients_img/logo_10.png"
 import c_logo_11 from "./clients_img/logo_11.png"
 import c_logo_12 from "./clients_img/logo_12.png"
 import c_logo_13 from "./clients_img/logo_13.png"
-
+import story_1 from "./stories_img/story_1.png"
+import story_2 from "./stories_img/story_2.png"
+import story_3 from "./stories_img/story_3.png"
+import story_4 from "./stories_img/story_4.png"
+import user_1 from "./images/user_1.png"
+import user_2 from "./images/user_2.png"
+import user_3 from "./images/user_3.png"
 
 export {
-    logo
-    , profile
-    , c_logo_1
-    , c_logo_2
-    , c_logo_3
-    , c_logo_4
-    , c_logo_5
-    , c_logo_6
-    , c_logo_7
-    , c_logo_8
-    , c_logo_9
-    , c_logo_10
-    , c_logo_11
-    , c_logo_12
-    , c_logo_13
+    logo, profile, c_logo_1, c_logo_2, c_logo_3, c_logo_4, c_logo_5, c_logo_6, c_logo_7, c_logo_8, c_logo_9, c_logo_10, c_logo_11, c_logo_12, c_logo_13, story_1, story_2, story_3, story_4, user_1, user_2, user_3
 };
