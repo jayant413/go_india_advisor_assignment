@@ -8,13 +8,17 @@ const Navbar = ({ selectedPage, setSelectedPage, setLeftBar }) => {
     <div className="">
       {/* Header */}
       <div className="bg-white h-[4rem] justify-between sm:justify-around pt-5 flex">
-        <div className="nav-img mt-[-5px]">
+        <a
+          href="https://github.com/jayant413/go_india_advisor_assignment"
+          target="_blank"
+          className="nav-img mt-[-5px]"
+        >
           <Image
             src={logo}
             alt="go india logo"
             className="w-20 ml-3 md:w-28 h-12 md:h-14 md:translate-y-[-10px]"
           />
-        </div>
+        </a>
         <div className="nav-search flex border-gray-600 outline-none bg-slate-200 border-solid border-[0px] rounded-md md:w-96 lg:w-[28rem] sm:w-[15rem] w-[13rem] p-[1px] text-black justify-center items-center h-8">
           <input
             type="text"
@@ -26,7 +30,9 @@ const Navbar = ({ selectedPage, setSelectedPage, setLeftBar }) => {
         <div className="nav-menu mr-10 md:mr-0">
           <ul className=" justify-between text-black font-semibold mr-8  md:flex hidden">
             <li className="ml-6 mt-1">
-              <a href="">Contact Us</a>
+              <a href="https://jayantsawarkar.vercel.app/" target="_blank">
+                Contact Us
+              </a>
             </li>
             <li className="ml-6 border-gray-500 border-solid border-2 rounded-md p-1">
               <button>SIGN UP</button>
