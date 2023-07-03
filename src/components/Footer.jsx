@@ -4,7 +4,7 @@ import { useState } from "react";
 const Footer = ({}) => {
   const [selected, setSelected] = useState(2);
   return (
-    <div className="bg-blue-700 h-[8vh] text-white md:hidden pt-4">
+    <div className="bg-blue-700 h-[9vh] text-white md:hidden pt-4">
       <ul className="flex justify-around text-3xl ">
         {footerIcons.map((fi, i) => {
           return (

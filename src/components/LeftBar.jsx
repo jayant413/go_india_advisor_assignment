@@ -4,7 +4,7 @@ import { MdMessage } from "react-icons/md";
 
 const LeftBar = ({ selectedPage, setLeftBar, setSelectedPage }) => {
   return (
-    <div className="bg-blue-800 z-20 text-white w-[15rem] absolute h-[72vh] md:h-[78vh] top-[10vh] md:top-[23vh]">
+    <div className="bg-blue-800 z-20 text-white w-[15rem] absolute h-[60.5vh] md:h-[78vh] md:top-[23vh] ">
       <div className="flex justify-around items-center mt-5 mb-5">
         <span className="flex items-center cursor-default ">
           <BiSolidUser className="rounded-2xl mr-1 text-2xl" /> Hello, User
