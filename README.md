@@ -4,17 +4,17 @@
 
 https://go-india-advisor-assignment.vercel.app/
 
-### Description :
+### Description:
 
-This project is created using next.js framework as a assignment from go india advisor.
+This project was created using the Next.js framework as an assignment from the Go India Advisor.
 
-### Instructions :
+Instructions:
 
-To run this project you can fork and clone the repository .
-After getting access in your preferred IDE.
+To run this project, you can fork and clone the repository.
+After getting access to your preferred IDE,
 Ex. VS code
 
-Run following command to install required libraries.
+Run the following command to install the required libraries:
 
 ```
 npm install
@@ -26,7 +26,7 @@ or
 yarn install
 ```
 
-After successfull installation of libraries you can run project with following command.
+After a successful installation of libraries, you can run the project with the following command:
 
 ```
 npm run dev
